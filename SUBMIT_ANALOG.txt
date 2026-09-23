@@ -1,0 +1,41 @@
+Tiny Tapeout — submit this ANALOG CMOS 74181 project
+====================================================
+
+Repo (after push):
+  https://github.com/brightwaterfall/ALU74181-CMOS-analog
+
+Top module:
+  tt_um_brightwaterfall_alu74181_cmos
+
+Tiles: 2x2 analog / custom GDS
+Analog pins: 0 (digital ui/uo/uio only for v1)
+
+
+Steps
+-----
+
+1. Finish Magic layout + LVS (see LAYOUT.md) and commit:
+     gds/tt_um_brightwaterfall_alu74181_cmos.gds
+     lef/tt_um_brightwaterfall_alu74181_cmos.lef
+
+2. Open https://app.tinytapeout.com/ → Tiny Tapeout SKY …
+
+3. CREATE A NEW PROJECT (separate from the digital ALU74181 project).
+
+4. Link GitHub repo:
+     brightwaterfall/ALU74181-CMOS-analog
+
+5. When sales open, buy analog tiles for 2x2 (and pay), then allocate
+   and complete submit.
+
+6. Do not confuse with:
+     https://github.com/brightwaterfall/ALU74181
+   that one is the DIGITAL Verilog 1x1 project.
+
+
+Notes
+-----
+
+- You need a SEPARATE shuttle project / tile purchase for this analog repo.
+- Until GDS/LEF exist, TT may accept the project shell but will not have a
+  final layout to tape out — complete LAYOUT.md first for a real chip.

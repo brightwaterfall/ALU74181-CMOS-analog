@@ -1,0 +1,62 @@
+# Tiny Tapeout project information
+project:
+  title:        "74181 CMOS transistor ALU"
+  author:       "brightwaterfall"
+  discord:      ""
+  description:  "74181 4-bit ALU as complementary CMOS transistor netlist (custom GDS path)"
+  language:     "Analog"
+  clock_hz:     0
+
+  # Analog / custom-GDS projects must be at least 1x2 (two tiles high).
+  # 2x2 chosen for headroom for ~710 MOSFETs; refine after Magic floorplan.
+  tiles: "2x2"
+
+  # Digital-level CMOS ALU uses ui/uo/uio only (no ua pads required for v1).
+  analog_pins: 0
+  uses_vapwr: false
+
+  top_module:  "tt_um_brightwaterfall_alu74181_cmos"
+
+  source_files:
+    - "project.v"
+
+pinout:
+  # Inputs (same functional map as digital 74181 TT project)
+  ui[0]: "A0"
+  ui[1]: "A1"
+  ui[2]: "A2"
+  ui[3]: "A3"
+  ui[4]: "B0"
+  ui[5]: "B1"
+  ui[6]: "B2"
+  ui[7]: "B3"
+
+  # Outputs
+  uo[0]: "F0"
+  uo[1]: "F1"
+  uo[2]: "F2"
+  uo[3]: "F3"
+  uo[4]: "AeqB"
+  uo[5]: "P_n"
+  uo[6]: "G_n"
+  uo[7]: "Cn4_n"
+
+  # Bidirectional pins (inputs)
+  uio[0]: "S0"
+  uio[1]: "S1"
+  uio[2]: "S2"
+  uio[3]: "S3"
+  uio[4]: "M"
+  uio[5]: "Cn_n"
+  uio[6]: ""
+  uio[7]: ""
+
+  # Analog pins (unused in v1)
+  ua[0]: ""
+  ua[1]: ""
+  ua[2]: ""
+  ua[3]: ""
+  ua[4]: ""
+  ua[5]: ""
+
+yaml_version: 6
